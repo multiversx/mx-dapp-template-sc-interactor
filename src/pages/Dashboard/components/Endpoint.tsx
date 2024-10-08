@@ -20,15 +20,6 @@ export const Endpoint = ({
           .filter((endpoint) => endpoint != null)
       : endpoints;
 
-  // if (whitelistEndpoints && whitelistEndpoints.length > 0) {
-  //   const filteredEndpoints = whitelistEndpoints
-  //     .map(({ name }) => endpoints.find((endpoint) => endpoint.name === name))
-  //     .filter((endpoint) => endpoint !== undefined);
-
-  //   if (filteredEndpoints.length !== 0) {
-  //     endpoints = filteredEndpoints;
-  //   }
-  // }
   return (
     <div className='flex flex-col gap-6'>
       {filteredEndpoints.map((endpoint, index) => {

@@ -4,7 +4,6 @@ import { contractAddress, contractAbi, environment } from 'config';
 import { useGetAccountInfo, useGetLoginInfo, useScrollToElement } from 'hooks';
 import { useGetSmartContractDetails } from 'hooks/useGetSmartContractDetails';
 import { AuthRedirectWrapper } from 'wrappers';
-import './styles.css';
 import { Account } from './components/Account';
 import { ContractAddress } from './components/ContractAddress';
 import { Endpoints } from './components/Endpoints';
