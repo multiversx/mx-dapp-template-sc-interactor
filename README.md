@@ -1,9 +1,6 @@
-# @multiversx/template-dapp
+The **MultiversX dApp Template SC Interactor**, built using [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/).
+It's a basic implementation of [@multiversx/sdk-dapp](https://www.npmjs.com/package/@multiversx/sdk-dapp), providing the basics for MultiversX authentication and TX signing for any smart contract based on an ABI and a contract address at your choice.
 
-The **MultiversX dApp Template**, built using [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/).
-It's a basic implementation of [@multiversx/sdk-dapp](https://www.npmjs.com/package/@multiversx/sdk-dapp), providing the basics for MultiversX authentication and TX signing.
-
-See [Dapp template](https://template-dapp.multiversx.com/) for live demo.
 
 ## Requirements
 
@@ -50,10 +47,22 @@ yarn build:devnet
 yarn build:testnet
 yarn build:mainnet
 ```
+### Step 4. Configure ABI and contract address
 
-## Roadmap
+Add your ABI file in `src/contracts` folder.
+In `src/config/index.ts` import your ABI file.
+Set `contractAbi` and `contractAddress` with your ABI and contract address, respectively.
 
-See the [open issues](https://github.com/multiversx/mx-template-dapp/issues) for a list of proposed features (and known issues).
+### Step 5 (Optional). Configure your whitelist endpoints
+
+This will set the endpoints you will be able to interact with on the page.
+If you don't set any endpoints in the whitelist, you will see all the available endpoints of the contract.
+
+In the `whitelistEndpoints` const add the endpoints you want to see:
+`name` is the endpoint's name from the ABI file
+`title` is at your choice, the title you want to appear for each endpoint
+
+The endpoints will appear in the order you add them in the whitelist.
 
 ## Contributing
 

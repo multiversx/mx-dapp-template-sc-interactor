@@ -72,17 +72,23 @@ export const Unlock = () => {
               loginButtonText='Opera Crypto Wallet - Beta'
               {...commonProps}
             />
+            <XaliasCrossWindowLoginButton
+              loginButtonText='xAlias'
+              data-testid='xAliasLoginBtn'
+              customWalletAddress='https://127.0.0.1:3000'
+              {...commonProps}
+            />
             <XaliasLoginWrapper {...commonProps} />
             <WebWalletLoginWrapper {...commonProps} />
             <IframeButton
               loginButtonText='Passkey Proxy'
-              loginType='passkey'
+              // loginType='passkey'
               {...commonProps}
             />
 
             <IframeButton
               loginButtonText='Metamask Proxy'
-              loginType='metamask'
+              // loginType='metamask'
               {...commonProps}
             />
           </div>
