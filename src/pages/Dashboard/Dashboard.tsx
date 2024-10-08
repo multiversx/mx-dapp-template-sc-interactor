@@ -1,17 +1,19 @@
-import { contractAddress, contractAbi, environment } from 'config';
-import { AuthRedirectWrapper } from 'wrappers';
-import { useGetAccountInfo, useGetLoginInfo, useScrollToElement } from 'hooks';
-import { useGetSmartContractDetails } from 'hooks/useGetSmartContractDetails';
 import { MutateModal } from '@multiversx/sdk-dapp-sc-explorer/components/Modals/MutateModal';
 import { ScExplorerContainer } from '@multiversx/sdk-dapp-sc-explorer/containers/ScExplorerContainer';
-import { ContractAddress } from './components/ContractAddress';
+import { contractAddress, contractAbi, environment } from 'config';
+import { useGetAccountInfo, useGetLoginInfo, useScrollToElement } from 'hooks';
+import { useGetSmartContractDetails } from 'hooks/useGetSmartContractDetails';
+import { AuthRedirectWrapper } from 'wrappers';
+import './styles.css';
 import { Account } from './components/Account';
+import { ContractAddress } from './components/ContractAddress';
 import { Endpoints } from './components/Endpoints';
-import './styles.css'
 
 const customClassNames = {
-    buttonPrimaryClassName: 'rounded-xl px-3 py-2 text-center bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-200 disabled:text-black disabled:cursor-not-allowed',
-    inputClassName: 'text-sm border border-gray-200 bg-white rounded-xl overflow-auto p-3.5 w-full'
+  buttonPrimaryClassName:
+    'rounded-xl px-3 py-2 text-center bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-200 disabled:text-black disabled:cursor-not-allowed',
+  inputClassName:
+    'text-sm border border-gray-200 bg-white rounded-xl overflow-auto p-3.5 w-full'
 };
 
 export const Dashboard = () => {
@@ -31,33 +33,33 @@ export const Dashboard = () => {
           <ContractAddress />
         </div>
         <ScExplorerContainer
-            smartContract={{
-              contractAddress: contractAddress,
-              abi: contractAbi,
-              deployedContractDetails: smartContractDetails
-            }}
-            accountConsumerHandlers={{
-              useGetLoginInfo,
-              useGetAccountInfo
-            }}
-            networkConfig={{ environment }}
-            config={{
-              canMutate: true,
-              canLoadAbi: false,
-              canDeploy: false,
-              canUpgrade: false,
-              canDisplayContractDetails: false
-            }}
-            customClassNames={customClassNames}
-            className='mx-sdk-sc'
-            children={
-              <>
-                <MutateModal />
-                <Endpoints />
-              </>
-            }
-          />
+          smartContract={{
+            contractAddress: contractAddress,
+            abi: contractAbi,
+            deployedContractDetails: smartContractDetails
+          }}
+          accountConsumerHandlers={{
+            useGetLoginInfo,
+            useGetAccountInfo
+          }}
+          networkConfig={{ environment }}
+          config={{
+            canMutate: true,
+            canLoadAbi: false,
+            canDeploy: false,
+            canUpgrade: false,
+            canDisplayContractDetails: false
+          }}
+          customClassNames={customClassNames}
+          className='mx-sdk-sc'
+          children={
+            <>
+              <MutateModal />
+              <Endpoints />
+            </>
+          }
+        />
       </div>
-      </AuthRedirectWrapper>
+    </AuthRedirectWrapper>
   );
 };

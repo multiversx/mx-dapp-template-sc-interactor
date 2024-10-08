@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
+import { AccountType } from '@multiversx/sdk-dapp/types';
 import axios from 'axios';
 import { contractAddress } from 'config';
 import { useGetNetworkConfig } from 'hooks';
-import { AccountType } from '@multiversx/sdk-dapp/types';
 
 export const useGetSmartContractDetails = () => {
   const { network } = useGetNetworkConfig();
@@ -22,7 +22,7 @@ export const useGetSmartContractDetails = () => {
         setSmartContractDetails(data);
       }
     } catch (err) {
-      console.error('Unable to fetch smartContractDetails');
+      console.error(err);
     } finally {
       setIsLoading(false);
     }
