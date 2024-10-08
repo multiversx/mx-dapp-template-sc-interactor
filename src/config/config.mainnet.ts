@@ -1,4 +1,4 @@
-// import abi from 'contracts/liquid-locking.abi.json';  // NOTE: replace this with your ABI file
+import abi from 'contracts/liquid-locking.abi.json'; // NOTE: replace this with your ABI file
 import { EnvironmentsEnum } from 'types';
 
 export * from './sharedConfig';
@@ -13,7 +13,7 @@ interface IWhitelistEndpoint {
   title: string;
 }
 
-// export const contractAbi = abi; // NOTE: uncomment this line
+export const contractAbi = abi;
 export const contractAddress = '';
 export const whitelistEndpoints: IWhitelistEndpoint[] = [
   { name: '', title: '' }

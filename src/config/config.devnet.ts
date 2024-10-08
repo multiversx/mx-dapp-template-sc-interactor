@@ -14,10 +14,8 @@ interface IWhitelistEndpoint {
   title: string;
 }
 
-export const contractAbi = abi; // NOTE: uncomment this line
-export const contractAddress =
-  'erd1qqqqqqqqqqqqqpgqd8fcu7nmwu68wscmj2dxgp52nuslrx46dk2s63kpqh';
+export const contractAbi = abi;
+export const contractAddress = '';
 export const whitelistEndpoints: IWhitelistEndpoint[] = [
-  { name: 'lock', title: 'Lock' },
-  { name: 'set_unbond_period', title: 'Unbond Period' }
+  { name: '', title: '' }
 ];
