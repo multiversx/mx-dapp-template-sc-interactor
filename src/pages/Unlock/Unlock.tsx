@@ -3,21 +3,17 @@ import {
   type WebWalletLoginButtonPropsType,
   type OperaWalletLoginButtonPropsType,
   type LedgerLoginButtonPropsType,
-  type WalletConnectLoginButtonPropsType,
-  IframeButton
+  type WalletConnectLoginButtonPropsType
 } from '@multiversx/sdk-dapp/UI';
+import { useNavigate } from 'react-router-dom';
 import {
   ExtensionLoginButton,
   LedgerLoginButton,
   OperaWalletLoginButton,
-  WalletConnectLoginButton,
-  WebWalletLoginButton as WebWalletUrlLoginButton,
-  XaliasCrossWindowLoginButton,
-  CrossWindowLoginButton
+  WalletConnectLoginButton
 } from 'components/sdkDappComponents';
 import { nativeAuth } from 'config';
 import { RouteNamesEnum } from 'localConstants';
-import { useNavigate } from 'react-router-dom';
 import { AuthRedirectWrapper } from 'wrappers';
 import { WebWalletLoginWrapper, XaliasLoginWrapper } from './components';
 
@@ -27,13 +23,6 @@ type CommonPropsType =
   | WebWalletLoginButtonPropsType
   | LedgerLoginButtonPropsType
   | WalletConnectLoginButtonPropsType;
-
-// choose how you want to configure connecting to the web wallet
-const USE_WEB_WALLET_CROSS_WINDOW = true;
-
-const WebWalletLoginButton = USE_WEB_WALLET_CROSS_WINDOW
-  ? CrossWindowLoginButton
-  : WebWalletUrlLoginButton;
 
 export const Unlock = () => {
   const navigate = useNavigate();
@@ -74,17 +63,6 @@ export const Unlock = () => {
             />
             <XaliasLoginWrapper {...commonProps} />
             <WebWalletLoginWrapper {...commonProps} />
-            <IframeButton
-              loginButtonText='Passkey Proxy'
-              loginType='passkey'
-              {...commonProps}
-            />
-
-            <IframeButton
-              loginButtonText='Metamask Proxy'
-              loginType='metamask'
-              {...commonProps}
-            />
           </div>
         </div>
       </div>

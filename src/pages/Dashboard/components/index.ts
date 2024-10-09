@@ -1,1 +1,2 @@
-export * from './Widget';
+export * from './Endpoint';
+export * from './Endpoints';

@@ -62,6 +62,7 @@
         "endOfLine": "lf"
       }
     ],
+    "no-param-reassign": "error",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -85,7 +86,7 @@
     "react/jsx-wrap-multilines": "off",
     "react/destructuring-assignment": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["warn"],
+    "@typescript-eslint/no-shadow": "warn",
     "react/no-array-index-key": "off"
   }
 }
