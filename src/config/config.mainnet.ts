@@ -14,7 +14,10 @@ interface IWhitelistEndpoint {
 }
 
 export const contractAbi = abi;
-export const contractAddress = '';
+export const contractAddress = ''; // NOTE: add your contract address here
+
+// NOTE: add the endpoints you want to interact with
+// NOTE: `name` is endpoint's name from the ABI file; `title` is at your choice
 export const whitelistEndpoints: IWhitelistEndpoint[] = [
-  { name: '', title: '' }
+  // { name: '', title: '' } // NOTE: uncomment this line and add your endpoints here
 ];
