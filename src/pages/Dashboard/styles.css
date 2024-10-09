@@ -151,13 +151,16 @@ div.mx-sdk-sc-field {
   margin-left: 0;
 }
 
-.dapp-core-component__amountSelect-module__amount, .mx-sdk-sc-amount-select-input-group {
-  margin-top: 20px;
+.mx-sdk-sc-form-panel-icon-warn {
+  color: #ffc107;
 }
 
-.dapp-core-component__amountSelect-module__wrapper, .mx-sdk-sc-amount-select-input-wrapper {
-  padding: 12px 0px !important;
-  border: 1px solid #D1D5DB !important;
+.mx-sdk-sc-interaction-form-button {
+  margin: 0 auto;
+}
+
+.mx-sdk-sc-interaction-form-fields {
+  margin: 24px 5px;
 }
 
 #gasLimit {
@@ -182,6 +185,15 @@ div.mx-sdk-sc-field {
   display: block !important;
 }
 
+.dapp-core-component__amountSelect-module__amount, .mx-sdk-sc-amount-select-input-group {
+  margin-top: 20px;
+}
+
+.dapp-core-component__amountSelect-module__wrapper, .mx-sdk-sc-amount-select-input-wrapper {
+  padding: 12px 0px !important;
+  border: 1px solid #D1D5DB !important;
+}
+
 .dapp-core-component__tokenBalance-module__balance,
 .dapp-core-component__globals-module__label {
   font-size: 12px !important;
@@ -200,6 +212,7 @@ div.mx-sdk-sc-field {
   --dapp-form-input-color: black!important;
   --dapp-form-bg: #D1D5DB !important;
   --dapp-form-select-input-color: black !important;
+  --dapp-form-select-input-color-hover: #4B5563 !important;
   --dapp-form-select-option-bg:#D1D5DB !important;
   --dapp-form-select-option-bg-selected:#9CA3AF !important;
   --dapp-form-select-option-bg-hover:#9CA3AF !important;
@@ -207,6 +220,7 @@ div.mx-sdk-sc-field {
   --dapp-form-select-menu-border: #D1D5DB !important;
   --dapp-form-select-icon-border: #D1D5DB !important;
   --dapp-form-select-indicator-fill: black !important;
+  --dapp-form-select-indicator-fill-hover: #4B5563 !important;
   --dapp-form-label-color: #9CA3AF !important;
   --dapp-form-max-btn-color: black !important;
   --dapp-form-max-btn-bg: white !important;
