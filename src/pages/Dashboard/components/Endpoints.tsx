@@ -9,7 +9,9 @@ export const Endpoints = () => {
   const endpoints = smartContract?.abiRegistry
     ?.endpoints as EndpointDefinition[];
 
-  if (!endpoints?.length) {
+  const hasEndpoints = endpoints?.length > 0;
+
+  if (!hasEndpoints) {
     return null;
   }
 
