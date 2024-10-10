@@ -49,17 +49,17 @@ yarn build:mainnet
 ```
 ### Step 4. Configure ABI and contract address
 
-Add your ABI file in `src/contracts` folder.
-In `src/config/config.devnet.ts` (or `config.mainnet.ts` or `config.testnet.ts`) import your ABI file.
-In the same file, set `contractAddress` with your contract address.
+Replace the ABI file in `src/contracts` folder.\
+In `src/config/config.devnet.ts` (or `config.mainnet.ts` or `config.testnet.ts`) replace the import with your ABI file.\
+In the same file, replace in `contractAddress` with your contract address.
 
 ### Step 5 (Optional). Configure your whitelist endpoints
 
-This will set the endpoints you will be able to interact with on the page.
+This will set the endpoints you will be able to interact with on the page.\
 If you don't set any endpoints in the whitelist, you will see all the available endpoints of the contract.
 
-In the `whitelistEndpoints` const add the endpoints you want to see:
-`name` is the endpoint's name from the ABI file
+In `whitelistEndpoints` add the endpoints you want to see:\
+`name` is the endpoint's name from the ABI file\
 `title` is at your choice, the title you want to appear for each endpoint
 
 !The endpoints will appear in the order you add them in the whitelist.

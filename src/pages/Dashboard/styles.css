@@ -60,6 +60,9 @@ div.mx-sdk-sc-field {
   border-radius: 12px;
 }
 
+.mx-sdk-sc-endpoint-output-results-title{
+  display: none;
+}
 
 .modal-content {
   background-color: white;
