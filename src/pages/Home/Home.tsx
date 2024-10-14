@@ -16,7 +16,6 @@ export const Home = () => {
                   from the ABI and address of any SC.{' '}
                 </p>
               </div>
-              <Transaction />
             </div>
           </div>
           <div className='h-4/6 bg-mvx-white bg-contain bg-no-repeat w-1/2 bg-center' />
