@@ -64,6 +64,16 @@ div.mx-sdk-sc-field {
   display: none;
 }
 
+.mx-sdk-sc-code-block{
+  position: relative;
+}
+
+.mx-sdk-sc-button-holder{
+  position: absolute;
+  top: 4px;
+  right: 8px;
+}
+
 .modal-content {
   background-color: white;
   border-radius: 12px;
@@ -171,6 +181,17 @@ div.mx-sdk-sc-field {
   border: 1px solid #D1D5DB;
   border-radius: 12px;
 }
+
+.mx-sdk-sc-input-group{
+  position: relative;
+}
+
+.mx-sdk-sc-input-group-append-icon{
+  position: absolute;
+  top: 7px;
+  right: 14px;
+}
+
 .mx-sdk-sc-label {
   color: #9CA3AF;
   font-size: 12px;
